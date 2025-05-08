@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: wukong
+    image: bitnami/postgresql:latest
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: wukong
+      POSTGRES_PASSWORD: wukong
+      POSTGRES_DB: wukong_db
+    volumes:
+      - polls_pg_data:/bitnami/postgresql
